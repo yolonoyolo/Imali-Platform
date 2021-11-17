@@ -1,0 +1,14 @@
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 100px;
+    padding: 0.1rem;
+}
+.pale_bg{
+    background-color: #644f68;
+    color: white;
+    padding: 0em;
+}
