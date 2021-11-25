@@ -1,21 +1,19 @@
-
-{% block head %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="'static/styles/app.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/app.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Imali</title>
+    {% block head %}{% endblock%}
 </head>
-{% endblock%}
-{% block body%}
-<body>
+<body class="body">
     <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
         <a href="#" class="navbar-brand">CANDY</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
@@ -49,105 +47,8 @@
             </ul>
         </div>
     </nav>
-
+    {% block body%}{% endblock%}
     
-    <section class="container-fluid px-0">
-        <div class="row align-items-center">
-            <div class="col-lg">
-                <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
-                    <h1>Imali</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img class="img-fluid" src="{{ url_for('static',filename='imgs/hand2.png') }}" alt="">
-            </div>
-        </div>
-    </section>
-    
-
-    <section class="container-fluid px-0">
-        <div class="row align-items-center content">
-            <div class="col-md-6 order-2 order-md-1">
-                <img src="{{ url_for('static',filename='imgs/milk.png') }}" alt="" class="img-fluid">
-            </div>
-            <div class="col-md-6 text-center order-1 order-md-2">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="{{ url_for('static',filename='imgs/lolli_icon.png') }}" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center content">
-            <div class="col-md-6 text-center">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="/static/imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="{{ url_for('static',filename='imgs/gumball.png') }}" alt="" class="img-fluid">
-            </div>
-        </div>
-        <div class="row align-items-center content">
-            <div class="col-md-6 order-2 order-md-1">
-                <img src="{{ url_for('static',filename='imgs/sprinkles.png') }}" alt="" class="img-fluid">
-            </div>
-            <div class="col-md-6 text-center order-1 order-md-2">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="static/imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores
-                            deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet
-                            quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt
-                            debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -163,10 +64,6 @@
             });
         });
     </script>
-{% endblock%}
-{% block footer%}
-<footer>
-
-</footer>
-{%endblock%}
+</body>
 </html>
+
