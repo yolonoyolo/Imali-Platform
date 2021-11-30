@@ -1,17 +1,25 @@
 #myFakeElement { color:red ; }
-
-body {
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+body{
     background: #f5d9d5;
-    font-family: "Nunito", sans-serif;
 }
 
 .blurb h2 {
-   color: #EA1C2C;
-   font-weight: 100;
-   font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    color: #D1D1D1;
+    font-weight: 100;
+    font-size: 2.5rem;
 }
 
 .blurb p {
+    font-family: 'Oswald', sans-serif;
     color: #f498b8;
     font-weight: 100;
     font-size: 1.125rem;
@@ -33,30 +41,48 @@ body {
 }
 
 #mainNavbar .nav-link:hover {
-    color: #EA1C2C;
+    color: white;
 }
 
 #mainNavbar .navbar-brand {
-    color: #EA1C2C;
+    color: white;
     font-size: 1.5rem;
 }
 
 #headingGroup span {
-    color: #EA1C2C;
+    color: white;
 }
 
 #headingGroup h1 {
-    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 4rem;
+    
+}
+.mainHeader{
+    background-image: url("/static/imgs/HomeBg.jpeg");
+    height: 7rem;
+    padding-top: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+}
+
+
+.navbar {
+    background: linear-gradient(to right, #73527A,#5C3B62);
+    
+}
+.navbar {
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .navbar.scrolled {
-    background: rgb(222,192,222);
-    transition: background 500ms;
+    pointer-events: none;
+    opacity: 0;
 }
-.navbar {
-    transition: background 500ms;
-}
+
 
 @media (max-width: 1200px) {
     #headingGroup h1 {
@@ -67,29 +93,130 @@ body {
         font-size: 2rem;
     }
 }
-img {
-    padding: 50px;
-}
-.blockquote-custom {
-    position: relative;
-    font-size: 1.1rem;
-  }
   
-  .blockquote-custom-icon {
+.blockquote-custom-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top: -25px;
     left: 50px;
-  }
-  body {
-    background: #eff0eb;
-    background-image: url('https://i.postimg.cc/MTbfnkj6/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }  
-  
+}
+   
+  /*FOOTER*/
+
+.mainfooter {
+  background: linear-gradient(59deg, #73527A,#5C3B62);
+  color: white;
+  margin-top:100px;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+  width: 100%;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+  width: 100%;
+}
+
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
