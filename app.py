@@ -6,21 +6,16 @@ app = Flask(__name__, template_folder="template")
 def homeroute():
     return render_template("index.html")
 
-@app.route("/about")
-def about_route():
-    return render_template("about.html")
+@app.route("/index.html")
+def homeroute2():
+    return render_template("index.html")
 
-@app.route("/events")
-def events_route():
-    return render_template("events.html")
+@app.route("/left-sidebar.html")
+def leftbar():
+    return render_template("left-sidebar.html")
 
-@app.route("/partners")
-def partners_route():
-    return render_template("partners.html")
-
-@app.route("/donate")
-def donate_route():
-    return render_template("donate.html")
-
+@app.route("/right-sidebar.html")
+def rightbar():
+    return render_template("right-sidebar.html")
 
     
