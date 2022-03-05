@@ -17,7 +17,7 @@ def login_required(f):
     return decorated_function
 
 # App config
-app = Flask(__name__, template_folder='templates') 
+app = Flask(__name__) 
 # Session config
 # app.secret_key = "abc"
 # app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
