@@ -2071,12 +2071,14 @@ input, select, textarea {
 	}
 
 	.image-wrapper {
-		position: relative;
+		object-fit: cover;
+		
 	}
 
 		.image-wrapper .image {
 			position: relative;
 			z-index: 2;
+			border-radius: 10px;
 		}
 
 		.image-wrapper.first:before {
@@ -2090,6 +2092,7 @@ input, select, textarea {
 			z-index: 1;
 			box-shadow: inset 0px 0px 0px 1px #e8e8e8;
 			background: #f6f8fb url("static/images/image-wrapper.svg");
+			border-radius: 10px;
 		}
 
 	#header-wrapper {
@@ -2113,7 +2116,7 @@ input, select, textarea {
 
 	#promo-wrapper {
 		position: relative;
-		background-image: url("static/images/overlay.png"), url("../../static/images/promo.jpg");
+		
 		background-size: 192px 192px, cover;
 		background-position: top left, center center;
 		color: #fff;
