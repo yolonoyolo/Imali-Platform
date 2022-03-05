@@ -42,7 +42,7 @@ app = Flask(__name__, template_folder='templates')
 @app.route("/")
 def homeroute():
     page="homepage"
-    return render_template("index.html",page=page)
+    return "Works"
 
 
 @app.route("/index.html")
