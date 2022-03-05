@@ -7,7 +7,7 @@ from auth_decorator import login_required
 
 
 # App config
-app = Flask(__name__, template_folder="template")
+app = Flask(__name__, template_folder='templates') 
 # Session config
 app.secret_key = "abc"
 app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
