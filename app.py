@@ -59,7 +59,7 @@ def leftbar():
 def rightbar():
     return render_template("right-sidebar.html")
 
-login config and what not
+#login config and what not
 @app.route("/login-home")
 @login_required
 def hello_world():
