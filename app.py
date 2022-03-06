@@ -50,14 +50,14 @@ def homeroute2():
     page="homepage"
     return render_template("index.html", page=page)
 
-@app.route("/left-sidebar.html")
+@app.route("/aboutus")
 def leftbar():
     page="left-sidebar"
-    return render_template("left-sidebar.html",page=page)
+    return render_template("aboutus.html",page=page)
 
 @app.route("/right-sidebar.html")
 def rightbar():
-    return render_template("right-sidebar.html")
+    return render_template("no-sidebar.html")
 
 #login config and what not
 @app.route("/login-home")
