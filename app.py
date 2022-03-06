@@ -17,13 +17,13 @@ def login_required(f):
     return decorated_function
 
 # App config
-app = Flask(__name__, template_folder='templates') 
-# Session config
-# app.secret_key = "abc"
-# app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
-# app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
+app = Flask(__name__) 
+Session config
+app.secret_key = "abc"
+app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
 
-# oAuth Setup
+oAuth Setup
 oauth = OAuth(app)
 google=oauth.register(
     name='google',
@@ -42,7 +42,7 @@ google=oauth.register(
 @app.route("/")
 def homeroute():
     page="homepage"
-    return redirect("index.html",page=page)
+    return "Works"
 
 
 @app.route("/index.html")
@@ -59,7 +59,7 @@ def leftbar():
 def rightbar():
     return render_template("right-sidebar.html")
 
-#login config and what not
+login config and what not
 @app.route("/login-home")
 @login_required
 def hello_world():
