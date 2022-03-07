@@ -3,23 +3,13 @@ from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from flask import session
 from functools import wraps
+from auth_decorator import login_required
 
-
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        user = dict(session).get('profile', None)
-        # You would add a check here and usethe user id or something to fetch
-        # the other data for that user/check if they exist
-        if user:
-            return f(*args, **kwargs)
-        return 'You aint logged in, no page for u!'
-    return decorated_function
 
 # App config
 app = Flask(__name__, template_folder='templates') 
 # Session config
-app.secret_key = "abc"
+app.secret_key = "risingstar4thewin"
 app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
 
@@ -52,8 +42,8 @@ def homeroute2():
 
 @app.route("/aboutus")
 def leftbar():
-    page="left-sidebar"
-    return render_template("aboutus.html",page=page)
+    page="sidebar"
+    return render_template("about_us.html",page=page)
 
 @app.route("/right-sidebar.html")
 def rightbar():
@@ -65,7 +55,7 @@ def rightbar():
 def hello_world():
     session_dict = dict(session)
     print(session_dict)
-    return f"Hello, you are logge in as {session_dict['profile']['email']}!"
+    return f"Hello, you are logged in as {session_dict['profile']['email']}!"
 
 
 @app.route('/login')
