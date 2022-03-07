@@ -2150,6 +2150,7 @@ input, select, textarea {
 	}
 
 		#logo a {
+			margin-top: 0px;
 			display: block;
 			width: 100%;
 			height: 4em;
@@ -2165,6 +2166,7 @@ input, select, textarea {
 			font-weight: 600;
 			letter-spacing: 3px;
 			text-align: center;
+			margin :0;
 			text-transform: uppercase;
 		}
 
@@ -3075,18 +3077,9 @@ input, select, textarea {
 
 	}
 
-	.bg4nav{
-			overflow: hidden; z-index: 2999;
-			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -moz-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
-			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -webkit-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
-			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -ms-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
-			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
-		
-	}
+	
 
- @media (max-width: 768px) {
-	 .bg4nav{
-		background-color: green;
-	 }
-	}
 
+.bg4nav{
+	transition: background-color 0.5s;
+  }

@@ -17,12 +17,12 @@
 					<div id="header" class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="/">Imali</a></h1>
+							<h1 id="logo" "><a href="/"id="navFixer"> Imali</a></h1>
 							
-
+							<img src="static/images/loho (1).png" style="width:100px; height:100px; position:fixed; right:43%; top:-1%; z-index: 50000;">
 						<!-- Nav -->
-							<nav id="nav" class="bg4nav">
-								<ul class="bg4nav" style="background-image: inherit; z-index: 2000;">
+							<nav id="nav" id="bg4nav">
+								<ul id="bg4nav" style="background-image: inherit; z-index: 2000;">
 									<li><a href="aboutus">About Us</a></li>
 									<li ><a href="left-sidebar.html">Events</a></li>
 									<li ><a href="right-sidebar.html">Donate</a></li>
@@ -40,7 +40,8 @@
         </div>
             {%block body%}
             {%endblock%}
-
+			<div id="bgcontainer" class="colorChange">
+				<div id="block"></div>
             
       <footer>
           <!-- Footer -->
@@ -96,6 +97,7 @@
 			<script src="static/js/breakpoints.min.js"></script>
 			<script src="static/js/util.js"></script>
 			<script src="static/js/main.js"></script>
+			<script src="static/js/scrollNav.js"></script>
     
       </footer>      
     </body>
