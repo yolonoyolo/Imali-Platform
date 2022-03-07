@@ -41,13 +41,26 @@ def homeroute2():
     return render_template("index.html", page=page)
 
 @app.route("/aboutus")
-def leftbar():
+def aboutus():
     page="sidebar"
     return render_template("about_us.html",page=page)
+    
+@app.route("/events")
+def events():
+    page="sidebar"
+    return render_template("events.html",page=page)
 
-@app.route("/right-sidebar.html")
-def rightbar():
-    return render_template("no-sidebar.html")
+
+
+@app.route("/partners")
+def partners():
+    page="sidebar"
+    return render_template("partners.html",page=page)
+
+@app.route("/pricing")
+def pricing():
+    page="sidebar"
+    return render_template("pricing.html", page=page)
 
 #login config and what not
 @app.route("/login-home")
@@ -55,7 +68,7 @@ def rightbar():
 def hello_world():
     session_dict = dict(session)
     print(session_dict)
-    return f"Hello, you are logged in as {session_dict['profile']['email']}!"
+    return f"Hello, you are logged in as {session_dict['profile']['name']}!"
 
 
 @app.route('/login')
