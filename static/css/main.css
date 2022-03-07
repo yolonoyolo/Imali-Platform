@@ -2077,7 +2077,7 @@ input, select, textarea {
 
 		.image-wrapper .image {
 			position: relative;
-			z-index: 2;
+			z-index: 0;
 			border-radius: 10px;
 		}
 
@@ -2107,11 +2107,14 @@ input, select, textarea {
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
 		background-repeat: repeat, no-repeat, no-repeat;
+		z-index: 2;
+		
 	}
 
 	.homepage #header-wrapper {
-		padding: 10em 0 6em 0;
+		padding: 8em 0 6em 0;
 		background-size: 128px 128px, 100% 100%, auto;
+		
 	}
 
 	#promo-wrapper {
@@ -2137,12 +2140,13 @@ input, select, textarea {
 /* Header */
 
 	#logo {
-		position: absolute;
-		z-index: 1;
+		position: fixed;
+		z-index: 30000;
 		top: 0;
 		left: 50%;
 		width: 15em;
 		margin-left: -7.5em;
+		
 	}
 
 		#logo a {
@@ -2166,12 +2170,13 @@ input, select, textarea {
 
 	#nav {
 		text-align: center;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 4em;
 		line-height: 4em;
+		
 	}
 
 		#nav > ul {
@@ -2413,9 +2418,6 @@ input, select, textarea {
 				font-size: 13pt;
 			}
 
-			span.extra {
-				display: none;
-			}
 
 		/* Wrappers */
 
@@ -2873,7 +2875,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				height: 50vh;
-				z-index: 10002;
+				z-index: 3002;
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
 				background-color: #45474a;
@@ -3072,3 +3074,19 @@ input, select, textarea {
 			}
 
 	}
+
+	.bg4nav{
+			overflow: hidden; z-index: 2999;
+			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -moz-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
+			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -webkit-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
+			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), -ms-linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
+			background-image: url('static/images/overlay.png'), url('static/images/header.svg'), linear-gradient(75deg, #5C3B62 45%, #73527A 55%);
+		
+	}
+
+ @media (max-width: 768px) {
+	 .bg4nav{
+		background-color: green;
+	 }
+	}
+
